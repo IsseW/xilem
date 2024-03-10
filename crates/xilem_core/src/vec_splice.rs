@@ -51,11 +51,11 @@ impl<'a, 'b, T> VecSplice<'a, 'b, T> {
     }
 
     pub fn peek(&self) -> Option<&T> {
-        self.v.last()
+        self.v.get(self.ix - 1)
     }
 
     pub fn peek_mut(&mut self) -> Option<&mut T> {
-        self.v.last_mut()
+        self.v.get_mut(self.ix - 1)
     }
 
     pub fn len(&self) -> usize {
